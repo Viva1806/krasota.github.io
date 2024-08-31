@@ -1,0 +1,164 @@
+nav {
+    font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+    display: flex;
+    gap: 3vb;
+    padding: 2vb 6vb;
+    font-size: 2.5vb
+}
+nav p a{
+    text-decoration: none;
+    border: none;
+}
+body{
+    background-color: #FFE4B5;
+    margin: 0;
+    padding: 0;
+}
+header h1{
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-left: -1vb;
+    margin-bottom: 5vb;
+}
+header img{
+    padding: 0 6vb;
+}
+.logo{
+    display: flex;
+}
+.but{
+    margin-left: 5vb;
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #DEB887;
+}
+nav p a:hover{
+    color: yellow;
+    cursor: pointer;
+}
+nav .but:hover{
+    color: yellow;
+    cursor: pointer;
+}
+nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 2px solid black;
+}
+.ser h1{
+    font-size: 50px;
+    margin-left: 5vb;
+}
+.ser p{
+    padding: 2vb 5vb;
+    font-size: 20px;
+    color: black;
+}
+.ser p{
+    border: 0.5vb solid black;
+    width: 50vb;
+}
+.burger{
+    padding: 0;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+}
+.burger:focus{
+    outline: none;
+}
+.burger:hover{
+    cursor: pointer;
+}
+.burger-line{
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 3px;
+    transition: .3s;
+}
+.burger-line:nth-child(1) {
+    top: 4px;
+    transform: translateY(10px);
+}
+.burger-line:nth-child(3) {
+    bottom: 4px;
+    transform: translateY(-10px);
+}
+.burger.open .burger-line:nth-child(1) {
+    transform: rotate(45deg);
+}
+.burger.open .burger-line:nth-child(3) {
+    transform: rotate(-45deg);
+}
+.burger.open .burger-line:nth-child(2) {
+   opacity: 0;
+}
+.b1{
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    display: block;
+}
+
+.menu{
+     z-index: 99;
+     visibility: visible;
+    opacity: 1;
+}
+.b1 ul a{
+    text-decoration: none;
+    display: flex;
+    color: black;
+    font-size: 3vb;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid black;
+    margin-left: 10vb; /* возможно, стоит использовать единицы `rem` или `px` */
+    background-color: yellow;
+    padding: 1vb; /* возможно, стоит использовать единицы `rem` или `px` */
+}
+
+
+@media (max-width: 700px) {
+    nav{
+        display: none;
+    }
+    .b1{
+        display: block;
+        padding-top: 4vb;
+    }
+    .burger{
+        margin-left: 15vb;
+        display: block;
+        width: 5vb;
+        height: 5vb;
+        padding-top: 6vb;
+    }
+    .ser p{
+        width: 40vb;
+        
+    }
+    .bl ul a{
+        font-size: 10000vb;
+    }
+    .logo img{
+        height: 15vb;
+        padding-top: 3vb;
+    }
+}
+@media (min-width: 701px){
+    .burger{
+        display: none
+    }
+    .b1{
+        display: none;
+    }
+}

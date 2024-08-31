@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Основные стили */
+body {
+    background-color: #FFE4B5;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    display: flex;
+    gap: 6vb;  /* возможно, стоит использовать единицы `rem` или `px` */
+    padding: 2vb 6vb;
+    font-size: 2.5vb;
+}
+.menu p a{
+    text-decoration: none;
+    border: none;
+}
+.menu a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 2px solid black;
+}
+.logo {
+    display: flex;
+    width: 60vb; /* возможно, стоит использовать единицы `rem` или `px` */
+}
+
+/* Заголовки */
+h1 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    margin-left: 2vb;
+    margin-bottom: 2vb;
+}
+
+/* Изображения */
+header img {
+    width: 15vb; /* возможно, стоит использовать единицы `rem` или `px` */
+    height: 15vb;
+    border-radius: 2vb;
+    margin-left: 5vb;
+}
+
+/* Кнопки */
+.but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25vb;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #DEB887;
+    height: 8vb;
+    padding-bottom: 2px;
+}
+
+.register {
+    display: flex;
+}
+
+.register h1 {
+    margin-top: 10vb;
+    font-size: 8vb;
+    font-family: "Kanit", sans-serif;
+    font-weight: 900;
+    color: black;
+    padding-left: 2vb;
+}
+
+.register img {
+    margin-right: 20vb;
+    width: 70vb; /* возможно, стоит использовать единицы `rem` или `px` */
+    height: 50vb; /* возможно, стоит использовать единицы `rem` или `px` */
+}
+
+/* Эффекты при наведении */
+.menu p a:hover,
+.menu .but:hover {
+    color: yellow;
+    cursor: pointer;
+}
+/* Услуги */
+.services {
+justify-content: center;
+text-align: center;
+}
+
+.services .services {
+    font-size: 6vb;
+    color: black;
+}
+
+.services a {
+    display: flex;
+    text-decoration: none;
+    font-size: 80px;
+    color: #FDFDFD;
+    margin-bottom: 10px;
+    margin-left: 100vb; /* возможно, стоит использовать единицы `rem` или `px` */
+    width: 50vb; /* возможно, стоит использовать единицы `rem` или `px` */
+    transition: all .2s;
+    border-top: 0.5vb solid black;
+    border-bottom: 0.5vb solid black;
+}
+.services a:hover{
+    border-right: 5px solid black;
+    padding-left: 2vb;
+    border-left: 5px solid black;
+}
+
+/* Бургер-меню */
+.burger {
+    padding: 0;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+}
+
+.burger:focus {
+    outline: none;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.burger-line {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.burger-line:nth-child(1) {
+    top: 4px;
+    transform: translateY(10px);
+}
+
+.burger-line:nth-child(3) {
+    bottom: 4px;
+    transform: translateY(-10px);
+}
+
+.burger.open .burger-line:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.burger.open .burger-line:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.burger.open .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+/* Меню и скрытые элементы */
+.b1 {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    display: block;
+}
+
+.menu {
+    z-index: 99;
+    visibility: visible;
+    opacity: 1;
+}
+
+.b1 ul a {
+    text-decoration: none;
+    display: flex;
+    color: black;
+    font-size: 3vb;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid black;
+    margin-left: 1vb; /* возможно, стоит использовать единицы `rem` или `px` */
+    background-color: yellow;
+    padding-top: 1vb; 
+}
+.drop{
+    display: none;
+    flex-direction: column;
+}
+.dropf{
+    display: flex;
+    flex-direction: column;
+}
+.drop a{
+    border: none;
+    padding-top: 1vb;
+    color: #FDFDFD; 
+}
+.services img{
+    margin-right: 100vb;
+    margin-bottom: 200vb;
+    width: 10vb;
+}
+.about .text{
+    display: flex;
+}
+.about h1{
+    font-size: 80px;
+    padding-top: 2vb;
+}
+.about p{
+    display: block;
+    font-size: 2rem;
+}
+.about img{
+    float: left;
+    height: 80vb;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Выравнивание по центру */
+    padding-top: 15vb;
+}
+.image {
+    max-width: 100%; /* Ограничение размера картинки */
+    height: auto; /* Соотношение сторон */
+}
+.slider{
+    width: 256px;
+    height: 256px;
+    border: 2px solid black;
+    margin: auto;
+    overflow: hidden;
+    border: none;
+}
+.slider-line{
+    height: 256px;
+    width: 2048px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all .5s;
+}
+.slider-next{
+    height: 7vb;
+    width: 7vb;
+    border-radius: 10vb;
+    background-color: aqua;
+    border: none;
+    margin-left: 30vb;
+}
+.slider-next p{
+    font-size: 20px;    
+}
+.slider-next:hover{
+    cursor: pointer;
+    border: 2px solid black;
+}
+.slider-back{
+    height: 7vb;
+    width: 7vb;
+    border-radius: 10vb;
+    background-color: aqua;
+    border: none;
+    margin-right: 30vb;
+}
+.slider-back p{
+    font-size: 20px;    
+}
+.slider-back:hover{
+    cursor: pointer;
+    border: 2px solid black;
+}
+.links {
+    display: flex;
+    gap: 100px;
+    margin-top: 10vb;
+    padding-left: 3vb; 
+    
+}
+.links a {
+    text-decoration: none;
+    font-size: 50px;
+    color: #FDFDFD;
+     /* Добавьте, если хотите, чтобы ширина работала как вы ожидаете */
+    width: auto; /* Лучше использовать auto вместо фиксированной ширины, если не уверены */
+    transition: all 0.2s;
+    border-top: 0.5vb solid black;
+    border-bottom: 0.5vb solid black;
+}
+
+.links a:hover {
+    border-right: 5px solid black;
+    padding-left: 2rem; /* Заменил `vb` на `rem` */
+    border-left: 5px solid black;
+}
+.links a i{
+    color: black;
+}
+.main {
+    display: block;
+}
+.rewies {
+    display: flex;
+ }
+ .main h1{
+    padding-top: 3vb;
+    font-size: 50px;
+    margin-left: 5vb;
+    color:  #FDFDFD;
+ }
+ .rewies p{
+     float: right;
+     padding-left: 5vb;
+     font-size: 30px;
+     margin-right: 15vb;
+ }
+ .rewies .text{
+     display: block;
+ }
+ .rewies .text img{
+ border-radius: 20vb;
+ margin-left: 6vb;
+ }
+  .rewies .images{
+     display: block;
+ }
+ .rewies .images img{
+ border-radius: 20vb;
+ margin-left: 6vb;
+ }
+ .rewies .images .user{
+     margin-right: 25vb;
+ }
+ 
+ .rewies .ti{
+     display: block;
+ }
+ .rewies .ti img{
+ border-radius: 20vb;
+ margin-left: 6vb;
+ }
+
+/* Медиа-запросы */
+@media(max-width: 1215px){
+    .slider-next{
+        width: 10vb;
+        height: 10vb;
+        border-radius: 10vb;
+        background-color: aqua;
+        border: none;
+        margin-left: 50vb;
+    }
+    .slider-next p{
+        font-size: 25px;  
+    }
+    .slider-back{
+        height: 10vb;
+        width: 10vb;
+        border-radius: 10vb;
+        background-color: aqua;
+        border: none;
+        margin-right: 10vb;
+    }
+    .slider-back p{
+        font-size: 25px;  
+    }
+}
+@media(max-width: 1030px ){
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Выравнивание по центру */
+        padding-top: 100vb;
+    }
+    .image {
+        max-width: 100%; /* Ограничение размера картинки */
+        height: auto; /* Соотношение сторон */
+    }
+    .slider{
+        width: 256px;
+        height: 256px;
+        border: 2px solid black;
+        margin: center;
+        overflow: hidden;
+    }
+    .slider-line{
+        height: 256px;
+        width: 2048px;
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: all .5s;
+    }
+    .slider-next{
+        width: 10vb;
+        height: 10vb;
+        border-radius: 10vb;
+        background-color: aqua;
+        border: none;
+        margin-left: -50vb;
+    }
+    .slider-next p{
+        font-size: 25px;    
+    }
+    .slider-next:hover{
+        cursor: pointer;
+        border: 2px solid black;
+    }
+    .slider-back{
+        height: 10vb;
+        width: 10vb;
+        border-radius: 10vb;
+        background-color: aqua;
+        border: none;
+        margin-right: 1vb;
+    }
+    .slider-back p{
+        font-size: 25px;  
+    }
+    .slider-back:hover{
+        cursor: pointer;
+        border: 2px solid black;
+    }
+}
+
+@media(max-width: 1030px){
+    .about .text{
+        display: block;
+    }
+}
+@media(max-width: 900px){
+    .about .text p{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 700px) {
+    nav {
+        display: none;
+    }
+
+    .b1 {
+        display: block;
+        
+    }
+
+    .burger {
+        display: block;
+        width: 5vb; /* возможно, стоит использовать единицы `rem` или `px` */
+        height: 5vb; /* возможно, стоит использовать единицы `rem` или `px` */
+        margin-left: 2vb;
+    }
+
+    .register {
+        display: block;
+    }
+
+    .services {
+        display: block;
+    }
+
+    .services a {
+        margin: 0;
+        margin-top: 1vb;
+        margin-left: 6vb; 
+        font-size: 40px;
+        border: 0.5vb solid black;
+        width: 40vb;
+    }
+    .services a:hover{
+        border-left: none;
+    }
+
+    .logo {
+        padding-top: 2vb;
+    }
+
+    .register h1 {
+        z-index: 1;
+        margin-top: -25vb;
+    }
+    .register img{
+        padding-left: 4vb;
+    }
+    .reviews p{
+        font-size: 3rem;
+    }
+    .links a{
+        border: 0.5vb solid black;
+    }
+    .container{
+       display: none;
+    }
+    .links{
+        display: none;
+    }
+    .reviews h1{
+        padding-top: 90vb;
+    }
+    .but {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25vb;
+        font-size: 30px;
+        background-color: #DEB887;
+        height: 8vb;
+        padding-bottom: 2px;
+    }
+}
+@media (min-width: 701px) {
+    .burger {
+        display: none;
+    }
+
+    .b1 {
+        display: none;
+    }
+}
